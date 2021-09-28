@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>music player</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="poster">
+                <img id="img"  src="img/5.jpg" alt="">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headphones" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="4" y="13" rx="2" width="5" height="7" />
+                        <rect x="15" y="13" rx="2" width="5" height="7" />
+                        <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+                      </svg>
+                      <div class="text"><h2> Dil lauta do - Jubin nautiyal</h2></div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="side-btn">
+                <button class="fav">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="44"
+                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                    </svg>
+                </button>
+                <button class="shuffle ">
+                    <i class="fas fa-random"></i>
+                </button>
+            </div>
+
+            <div class="control-btn">
+                <div class="song-meter">0:00</div>
+                <div class="progress-area">
+                    <input type="range" max="100" min="0" step="1" value="0" class="progress"></input>
+                </div>
+                <div class="full-song">5:02</div>
+                <button class="prev-btn">
+                    <svg  xmlns="http://www.w3.org/2000/svg" class=" icon icon-tabler icon-tabler-player-track-prev"
+                        width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#d2fcf6" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M21 5v14l-8 -7z" />
+                        <path d="M10 5v14l-8 -7z" />
+                    </svg>
+                </button>
+                <button class="pause-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class=" pausePlayAni animatePause icon icon-tabler icon-tabler-player-play" width="44"
+                        height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 4v16l13 -8z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="pausePlayAni animatePause icon icon-tabler icon-tabler-player-pause" width="44"
+                        height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#fff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="6" y="4" width="4" height="15" rx="1" />
+                        <rect x="14" y="4" width="4" height="15" rx="1" />
+                    </svg>
+                </button>
+                <button class="next-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class=" icon icon-tabler icon-tabler-player-track-next"
+                        width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#d2fcf6" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 5v14l8 -7z" />
+                        <path d="M14 5v14l8 -7z" />
+                    </svg>
+                </button>
+            </div>
+            <!-- <audio  preload="metadata" class="audio">
+                <source src="songs/5.mp3" type="audio/mp3">
+            </audio> -->
+        </div>
+    </main>
+        <div class="queue ">
+            <h2 id="arrow">&lsaquo;</h2>
+            <div class="images"></div>
+        </div>
+    <div class="favorite-list">
+        <h4 class="downArrow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="44"
+                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                    </svg>List
+        </h4>
+        <div class="favSongsListShow"></div>
+    </div>
+    
+      <a  target="_blank" href="https://twitter.com/Sahilsaif2002"><i class="fab fa-twitter"></i></a>
+      <a  target="_blank" href="https://www.linkedin.com/in/sk-saifuddin-8593411b4/"><i class="fab fa-linkedin-in"></i></a>
+
+    <script defer src="script.js"></script>
+
+</body>
+
+</html>
